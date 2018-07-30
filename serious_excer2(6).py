@@ -1,6 +1,6 @@
 show = "Hello ,my name is Loc .These are my sheep sizes: "
 
-sizes = [5,7,300,90,24,50,75]
+sizes = [5,7,8,90,24,50,75]
 
 print(show)
 print(sizes)
@@ -15,24 +15,16 @@ for times in range(3):
         sizes[i] += 50
     print("MONTH",month ,": ")
     print(new_flock)
-    print(sizes)
-    print("Now my biggest ship has size",max(sizes),".Let's shear it")
+    if month < 3:
+        print(sizes)
+        print("Now my biggest ship has size",max(sizes),".Let's shear it")
 
-    default_size = 8
+        default_size = 8
+        pos_max = sizes.index(max(sizes))
 
-    pos_max = sizes.index(max(sizes))
-
-    sizes[pos_max] = default_size
-    print("After shearing, here is my flock")
-    print(sizes)
-
-    if month == 3 :
-        for i in range(len(sizes)):
-            sizes[i] += 50
-    print("MONTH",month ,": ")
-    print(new_flock)
-    print(sizes)
-
+        sizes[pos_max] = default_size
+        print("After shearing, here is my flock")
+        print(sizes)
 
 total = sum(sizes)
 print("my flock has size in total :",total)

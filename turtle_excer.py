@@ -7,10 +7,10 @@ colors = ['red','blue','brown','yellow','grey']
 
 n_angle = 3
 
-for i in range(6):
-    for i in range(n_angle):
+for i in range(5):
+    for j in range(n_angle):
         forward(100)
-        color(colors[n_angle-3])
+        color(colors[i])
         left(360/n_angle)
     n_angle += 1
 
